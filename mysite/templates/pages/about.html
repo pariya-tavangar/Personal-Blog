@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Page for Modern Blog">
+    <title>About Us - Modern Blog</title>
+    <link rel="stylesheet" href="">
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and general styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header section */
+        header {
+            background: #2e3b4e;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-family: 'Georgia', serif;
+        }
+
+        header p {
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+
+        header nav {
+            margin-top: 20px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            margin: 0 20px;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #f39c12;
+        }
+
+        /* Main container */
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* About Section */
+        .about-section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .about-content {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .about-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .about-content p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .about-content p:last-child {
+            margin-bottom: 30px;
+        }
+
+        .about-img {
+            flex: 0 0 250px;
+            height: 250px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left: 40px;
+        }
+
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Contact Form Section */
+        .contact-form {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1.1em;
+            color: #333;
+            background: #f7f7f7;
+            resize: none;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+        }
+
+        .contact-form button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background: #f39c12;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: #e67e22;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2e3b4e;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 1.1em;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content {
+                padding-right: 0;
+                text-align: center;
+            }
+
+            .about-img {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            .contact-form {
+                margin-top: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <h1>About Modern Blog</h1>
+    <p>Learn more about us and our journey</p>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>Hello! I’m John Doe, a passionate writer and content creator. I started this blog as a way to share my thoughts, ideas, and experiences with the world. I write about a wide variety of topics including travel, technology, personal growth, and lifestyle.</p>
+            <p>My goal is to inspire readers to live a more meaningful life and to share valuable insights that can help you navigate through your daily life. This blog is my creative outlet, and I am excited to have you here on this journey with me!</p>
+        </div>
+        <div class="about-img">
+            <img src="https://via.placeholder.com/250" alt="Author">
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form">
+        <h2>Contact Me</h2>
+        <p>If you have any questions, comments, or just want to say hello, feel free to reach out to me through the form below!</p>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Modern Blog | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+</footer>
+
+</body>
+</html>

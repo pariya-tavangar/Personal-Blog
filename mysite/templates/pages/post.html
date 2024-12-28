@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Full Blog Post Page for Modern Blog">
+    <title>Blog Post - Modern Blog</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and general styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header section */
+        header {
+            background: #2e3b4e;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-family: 'Georgia', serif;
+        }
+
+        header p {
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+
+        header nav {
+            margin-top: 20px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            margin: 0 20px;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #f39c12;
+        }
+
+        /* Main content container */
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Main Post Content */
+        .main-content {
+            flex: 2;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        .main-content h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .post-meta {
+            font-size: 1em;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .post-meta span {
+            margin-right: 20px;
+        }
+
+        .post-meta a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+
+        .post-meta a:hover {
+            text-decoration: underline;
+        }
+
+        .post-content {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .post-content img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            margin: 20px 0;
+        }
+
+        .post-content p {
+            margin-bottom: 20px;
+        }
+
+        .comments-section {
+            margin-top: 50px;
+        }
+
+        .comments-section h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .comment {
+            margin-bottom: 30px;
+        }
+
+        .comment h4 {
+            font-size: 1.5em;
+            color: #f39c12;
+        }
+
+        .comment p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .comment-form {
+            margin-top: 40px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .comment-form h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .comment-form input, .comment-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1.1em;
+            color: #333;
+            background: #f7f7f7;
+            resize: none;
+        }
+
+        .comment-form textarea {
+            height: 150px;
+        }
+
+        .comment-form button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background: #f39c12;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .comment-form button:hover {
+            background: #e67e22;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            flex: 1;
+            margin-left: 30px;
+        }
+
+        .sidebar h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+        }
+
+        .sidebar ul li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .sidebar ul li a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2e3b4e;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 1.1em;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .main-content {
+                margin-bottom: 30px;
+            }
+
+            .sidebar {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <h1>Modern Blog</h1>
+    <p>Your go-to place for amazing stories and ideas</p>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <!-- Main Post Content -->
+    <div class="main-content">
+        <h1>The Joys of Traveling Solo</h1>
+        <div class="post-meta">
+            <span>By <a href="#">John Doe</a></span>
+            <span>| Published on July 15, 2024</span>
+            <span>| 5 min read</span>
+        </div>
+        <div class="post-content">
+            <img src="https://via.placeholder.com/1200x600/3498db/ffffff?text=Solo+Travel+Image" alt="Travel Solo">
+            <p>Traveling solo is an incredibly rewarding experience. Whether you're exploring a new city, hiking in the mountains, or relaxing by the beach, there’s something special about being on your own schedule and making spontaneous decisions...</p>
+
+            <p>One of the biggest benefits of solo travel is the freedom it offers. You can go wherever you want, do whatever you want, and change your plans on a whim. It’s a great way to reconnect with yourself and discover new places that you might have overlooked otherwise...</p>
+
+            <p>During my solo trips, I've met so many interesting people and learned more about myself than I ever thought possible. It’s a chance to step out of your comfort zone, try new things, and face challenges head-on...</p>
+        </div>
+
+        <div class="comments-section">
+            <h3>Comments</h3>
+            <div class="comment">
+                <h4>Jane Doe</h4>
+                <p>Solo travel is definitely life-changing! I did my first solo trip last year, and I can’t recommend it enough. It gave me the confidence I never knew I had.</p>
+            </div>
+            <div class="comment">
+                <h4>Mark Smith</h4>
+                <p>I’ve always been hesitant to travel alone, but after reading this, I think it’s something I’ll try. Thanks for sharing your experience!</p>
+            </div>
+        </div>
+
+        <!-- Comment Form -->
+        <div class="comment-form">
+            <h3>Leave a Comment</h3>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Comment" required></textarea>
