@@ -4,4 +4,4 @@
 ### Goal Features
 - sharing posts with customized panel
 - understandable minimal design
-- responsible
+- responsible format
